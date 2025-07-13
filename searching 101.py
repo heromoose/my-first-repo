@@ -1,5 +1,9 @@
 def ordinal_indicator(num):
-    """ determines what ordinal indicator to return to calling function based on value provided."""
+    """ determines what ordinal indicator to return to calling function based on value provided.
+    Note that I decided to programmatically determine the ordinal indicator versus hard-coding since
+    the user is asked to enter 6 numbers. This indicates that a future use may require
+    the user to enter 10, or 20 or 100 numbers, so I wanted to build scalability into
+    the solution."""
 
     teen_year_check = num % 100
     if 10 <= teen_year_check <= 19:
@@ -18,7 +22,8 @@ def ordinal_indicator(num):
             return "th"
 
 def get_numbers():
-    """ gets 6 numbers from the user"""
+    """ gets 6 numbers from the user and return a list of those numbers.
+    Note that I don't do any input validation."""
     numbers = []
     for idx in range(1, 7):
         if idx == 6:

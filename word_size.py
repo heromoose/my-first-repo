@@ -1,11 +1,13 @@
 
 def word_sizes(string):
+    """takes a string as input, and returns a dict object which contains a frequency
+    of the count of each word size. """
     word_sizes = {}
     word_list = string.split()
     for word in word_list:
         size = len(word)
         if size in word_sizes:
-            # increment
+            # increment the word size count
             word_sizes[size] += 1
         else:
             # create new key/val pair
